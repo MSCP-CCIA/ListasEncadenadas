@@ -4,7 +4,10 @@ public class Main {
         Scanner leer =new Scanner(System.in);
         int n = leer.nextInt();
         Nodo[] array =new Nodo[n];
-        System.out.println(insertarAlInicio(array)[0].getSiguiente());
+        array[0]=new Nodo();
+        array[0].setDato(20);
+        array[0].setSiguiente(null);
+        System.out.println(insertarAlInicio(array)[1].getSiguiente());
 
     }
     public static boolean listaVacia(Nodo[]array){
