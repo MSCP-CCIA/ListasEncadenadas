@@ -7,7 +7,7 @@ public class Main {
         array[0]=new Nodo();
         array[0].setDato(20);
         array[0].setSiguiente(null);
-        System.out.println(insertarAlInicio(array)[1].getSiguiente());
+        mostrar(insertarAlFinal(insertarAlInicio(array),0));
 
     }
     public static boolean listaVacia(Nodo[]array){
@@ -36,4 +36,26 @@ public class Main {
         }
 
     }
+    public static Nodo[] insertarAlFinal(Nodo[]array,int iteradora){
+        Nodo nuevo =new Nodo();
+        if(array[iteradora].getSiguiente()==null){
+                Nodo[] arrayCopy =new Nodo[array.length+1];
+                System.arraycopy(array,0,arrayCopy,0,array.length);
+                array[iteradora].setSiguiente(nuevo);
+                arrayCopy[iteradora+1]=nuevo;
+                arrayCopy[0].setSiguiente(null);
+                arrayCopy[0].setDato((int)(Math.random()*99+10));
+                return arrayCopy;
+
+        }else{
+            return insertarAlFinal(array,iteradora+1);
+        }
+
+    }
+    public static void mostrar(Nodo[]array){
+        for (Nodo nodo:array) {
+            System.out.println(nodo.toString());
+        }
+    }
 }
+

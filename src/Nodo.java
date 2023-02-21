@@ -17,4 +17,12 @@ public class Nodo<T> {
     public void setSiguiente(Nodo siguiente) {
         Siguiente = siguiente;
     }
+
+    @Override
+    public String toString() {
+        return "Nodo{" +
+                "dato=" + dato +
+                ", Siguiente=" + Siguiente +
+                '}';
+    }
 }
