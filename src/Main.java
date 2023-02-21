@@ -7,7 +7,7 @@ public class Main {
         array[0]=new Nodo();
         array[0].setDato(20);
         array[0].setSiguiente(null);
-        mostrar(insertarAlFinal(insertarAlInicio(array),0));
+        mostrar(insertarAlInicio(array));
 
     }
     public static boolean listaVacia(Nodo[]array){
