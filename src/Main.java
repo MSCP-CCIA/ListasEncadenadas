@@ -4,11 +4,11 @@ public class Main {
         Scanner leer =new Scanner(System.in);
         int n = leer.nextInt();
         Nodo[] array =new Nodo[n];
-        System.out.println(insertarAlInicio(array).toString());
+        System.out.println(insertarAlInicio(array)[0].getSiguiente());
 
     }
     public static boolean listaVacia(Nodo[]array){
-        if(array.length==0){
+        if(array[0]==null){
             return true;
         }else {
             return false;
